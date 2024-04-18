@@ -1,4 +1,4 @@
-# visitorPattern
+## Problem Scenario
 
 Imagine you are looking for a new mobile plan for your smartphone. Three major telecommunication providers are offering enticing deals: Smart, Globe, and Ditto.
 
