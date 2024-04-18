@@ -1,23 +1,27 @@
+import java.util.*;
+
 class UnliCallTextPackage implements UnliCallOffer {
-    @Override
-    public String showUnliCallsTextOffer(String telcoName, boolean unliCallText) {
-        if (unliCallText) {
-            return "Unlimited calls and text package for " + telcoName;
-        } else {
-            return "No unlimited calls and text package for " + telcoName;
-        }
+
+    private static Map<String, String> unliCallOfferMap = new HashMap<>();
+
+    static {
+        unliCallOfferMap.put("Smart", "False");
+        unliCallOfferMap.put("Globe", "True");
+        unliCallOfferMap.put("Ditto", "True");
     }
 
     @Override
-    public String showUnliCallsTextOffer(TelcoSubscription subscription) {
-        if (subscription instanceof Telco) {
-            Telco telco = (Telco) subscription;
-            if (telco.hasUnliCallText()) {
-                return "Unlimited calls and text package for " + telco.getTelcoName();
-            } else {
-                return "No unlimited calls and text package for " + telco.getTelcoName();
-            }
+    public String showUnliCallsTextOffer(String telcoName, boolean unliCallText) {
+
+        if (!unliCallText) {
+            return "No unlimited calls and text package for " + telcoName;
+        } else {
+            return "Unlimited calls and text package for " + telcoName;
         }
-        return "";
+
+    }
+
+    public String showUnliCallsTextOffer(TelcoSubscription telco) {
+        return this.showUnliCallsTextOffer(telco.getTelcoName(), telco.hasUnliCallText());
     }
 }
