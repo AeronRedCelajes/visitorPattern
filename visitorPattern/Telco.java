@@ -6,9 +6,9 @@ public class Telco implements TelcoSubscription{
     private int dataAllowance;
     private boolean unliCallText;
 
-    public Telco(double promoPrice, int dataAllowance, String telcoName, boolean unliCallText){
-        this.promoPrice = promoPrice;
+    public Telco(int dataAllowance, double promoPrice, String telcoName, boolean unliCallText){
         this.dataAllowance = dataAllowance;
+        this.promoPrice = promoPrice;
         this.telcoName = telcoName;
         this.unliCallText = unliCallText;
     }

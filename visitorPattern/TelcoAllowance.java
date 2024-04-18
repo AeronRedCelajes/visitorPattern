@@ -2,25 +2,21 @@ package visitorPattern;
 
 import java.util.*;
 
-class TelcoAllowance implements UsagePromo {
+public class TelcoAllowance implements UsagePromo {
 
-    private static final Map<String, Integer> allowanceMap = new HashMap<>();
+    // HashMap to store data allowances for each telco
+    private static final Map<String, Double> allowanceMap = new HashMap<>();
 
     static {
-        allowanceMap.put("Smart", 15);
-        allowanceMap.put("Globe", 10);
-        allowanceMap.put("Ditto", 8);
+        allowanceMap.put("Smart", 15.0);
+        allowanceMap.put("Globe", 10.0);
+        allowanceMap.put("Ditto", 8.0);
     }
 
     @Override
     public String showAllowance(String telcoName, double money) {
-        return "Total Cost for " + telcoName + ": ₱" + money;
+        // Get data allowance from the HashMap and it will depend on the telcoName
+        double allowance = allowanceMap.getOrDefault(telcoName, 0.0);
+        return telcoName + " offers a data allowance of " + allowance + " GB for ₱" + money + " per month.";
     }
-    /*
-    @Override
-    public String showAllowance(TelcoSubscription telco) {
-        return this.showAllowance(telco.getTelcoName(), telco.getPromoPrice());
-    }
-    */
-
 }
