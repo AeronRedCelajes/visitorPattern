@@ -16,9 +16,11 @@ class TelcoAllowance implements UsagePromo {
     public String showAllowance(String telcoName, double money) {
         return "Total Cost for " + telcoName + ": ₱" + money;
     }
-
+    /*
     @Override
     public String showAllowance(TelcoSubscription telco) {
         return this.showAllowance(telco.getTelcoName(), telco.getPromoPrice());
     }
+    */
+
 }

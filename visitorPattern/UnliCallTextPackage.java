@@ -2,14 +2,14 @@ package visitorPattern;
 
 import java.util.*;
 
-class UnliCallTextPackage implements UnliCallOffer {
+class UnliCallTextPackage implements UnliCallsTextOffer {
 
-    private static Map<String, String> unliCallOfferMap = new HashMap<>();
+    private static Map<String, String> unliCallTextOfferMap = new HashMap<>();
 
     static {
-        unliCallOfferMap.put("Smart", "False");
-        unliCallOfferMap.put("Globe", "True");
-        unliCallOfferMap.put("Ditto", "True");
+        unliCallTextOfferMap.put("Smart", "False");
+        unliCallTextOfferMap.put("Globe", "True");
+        unliCallTextOfferMap.put("Ditto", "True");
     }
 
     @Override
@@ -23,7 +23,11 @@ class UnliCallTextPackage implements UnliCallOffer {
 
     }
 
+    /*
+    @Override
     public String showUnliCallsTextOffer(TelcoSubscription telco) {
-        return this.showUnliCallsTextOffer(telco.getTelcoName(), telco.hasUnliCallText());
+        return this.showUnliCallsTextOffer(telco.getTelcoName(), telco.getUnliCallText());
     }
+    */
+
 }
