@@ -10,14 +10,14 @@ Implement the visitor design pattern based from the given diagram. Refer to this
 Test your codes before the given client program:
 
 ```
-public class TelcoPromo {
+public class visitorPattern.TelcoPromo {
   public static void main(String[] args) {
-    TelcoSubscription smart = new Telco(15, 500, Smart,false);
-    TelcoSubscription globe = new Telco(10, 450, Globe,true);
-    TelcoSubscription ditto = new Telco(8, 400, Ditto,true);
+    visitorPattern.TelcoSubscription smart = new visitorPattern.Telco(15, 500, Smart,false);
+    visitorPattern.TelcoSubscription globe = new visitorPattern.Telco(10, 450, Globe,true);
+    visitorPattern.TelcoSubscription ditto = new visitorPattern.Telco(8, 400, Ditto,true);
 
-    UsagePromo promo = new TelcoAllowance();
-    UnliCallOffer unli = new UnliCallTextPackage();    
+    visitorPattern.UsagePromo promo = new visitorPattern.TelcoAllowance();
+    UnliCallOffer unli = new visitorPattern.UnliCallTextPackage();    
 
     System.out.println("Smart Data Usage Offer and price: " + promo.showAllowance(smart) );
     System.out.println("Globe Data Usage Offer and price" + promo.showAllowance(globe));

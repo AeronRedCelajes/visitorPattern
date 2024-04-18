@@ -1,3 +1,5 @@
+package visitorPattern;
+
 public class TelcoPromo {
     public static void main(String[] args) {
       TelcoSubscription smart = new Telco(15, 500, "Smart",false);
@@ -9,7 +11,7 @@ public class TelcoPromo {
   
       System.out.println("Smart Total Cost: ₱" + promo.showAllowance(smart));
       System.out.println("Globe Total Cost: ₱" + promo.showAllowance(globe));
-      System.out.println("Telco C Total Cost: ₱" + promo.showAllowance(ditto));
+      System.out.println("visitorPattern.Telco C Total Cost: ₱" + promo.showAllowance(ditto));
   
       System.out.println("\nSmart unlimited calls and text package: " + unli.showUnliCallsTextOffer(smart));
       System.out.println("Globe unlimited calls and text package: " + unli.showUnliCallsTextOffer(globe));

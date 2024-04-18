@@ -1,3 +1,5 @@
+package visitorPattern;
+
 public class Telco implements TelcoSubscription{
     private String telcoName;
     private double promoPrice;
