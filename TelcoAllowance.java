@@ -1,15 +1,22 @@
+import java.util.*;
+
 class TelcoAllowance implements UsagePromo {
-    @Override
-    public String showAllowance(String telcoName, double price) {
-        return "Total Cost for " + telcoName + ": ₱" + price;
+
+    private static final Map<String, Integer> allowanceMap = new HashMap<>();
+
+    static {
+        allowanceMap.put("Smart", 15);
+        allowanceMap.put("Globe", 10);
+        allowanceMap.put("Ditto", 8);
     }
 
     @Override
-    public String showAllowance(TelcoSubscription subscription) {
-        if (subscription instanceof Telco) {
-            Telco telco = (Telco) subscription;
-            return "Total Cost for " + telco.getTelcoName() + ": ₱" + telco.getPromoPrice();
-        }
-        return "";
+    public String showAllowance(String telcoName, double money) {
+        return "Total Cost for " + telcoName + ": ₱" + money;
+    }
+
+    @Override
+    public String showAllowance(TelcoSubscription telco) {
+        return this.showAllowance(telco.getTelcoName(), telco.getPromoPrice());
     }
 }
