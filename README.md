@@ -37,4 +37,4 @@ public class TelcoPromo {
 ```
 
 ## Class Diagram
-![UML Visitor Pattern](https://github.com/AeronRedCelajes/visitorPattern/assets/142370807/ae8c1d68-28c0-4346-bc94-ff747c47db75)
+![UML Visitor Pattern](https://github.com/AeronRedCelajes/visitorPattern/assets/142370807/ebf14827-ec4c-49dd-88fd-09ba921cca23)
